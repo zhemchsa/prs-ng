@@ -25,4 +25,10 @@ export class UserService {
     let requestUrl = this.url + '/';
     return this.http.get<User[]>(`${this.url}/`);
   }
+
+  //http://localhost:8080/users/{id}
+  getbyId(id: number): Observable<User[]> {
+    let requestUrl = this.url + '/' + id;
+    return this.http.get<User[]>(requestUrl);
+  }
 }
