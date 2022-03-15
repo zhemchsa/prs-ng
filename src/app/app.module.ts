@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserDetailComponent } from './features/user-detail/user-detail.component';
 import { FormsModule } from '@angular/forms';
+import { VendorListComponent } from './features/vendor-list/vendor-list.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     AboutComponent,
     UserListComponent,
     UserDetailComponent,
+    VendorListComponent,
   ],
   imports: [
     BrowserModule,
