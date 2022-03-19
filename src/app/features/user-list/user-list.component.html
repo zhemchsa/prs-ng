@@ -1,3 +1,6 @@
+<button type="button" class="btn btn-primary" routerLink="/user/create">
+  Add New User
+</button>
 <table class="table table-striped">
   <thead>
     <th scope="col">Username</th>
@@ -7,6 +10,7 @@
     <th scope="col">Email</th>
     <th scope="col">Reviewer</th>
     <th scope="col">Admin</th>
+    <th scope="col">Actions</th>
   </thead>
   <tbody>
     <tr *ngFor="let user of users">
@@ -17,6 +21,7 @@
       <td>{{ user.email }}</td>
       <td>{{ user.reviewer }}</td>
       <td>{{ user.admin }}</td>
+      <td><a routerLink="/user/detail/{{ user.id }}">Details</a></td>
     </tr>
   </tbody>
 </table>

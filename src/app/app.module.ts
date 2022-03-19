@@ -11,6 +11,12 @@ import { UserDetailComponent } from './features/user-detail/user-detail.componen
 import { FormsModule } from '@angular/forms';
 import { VendorListComponent } from './features/vendor-list/vendor-list.component';
 import { VendorDetailComponent } from './features/vendor-detail/vendor-detail.component';
+import { ProductListComponent } from './features/product-list/product-list.component';
+import { ProductDetailComponent } from './features/product-detail/product-detail.component';
+import { MenuComponent } from './core/menu/menu.component';
+import { RequestListComponent } from './features/request-list/request-list.component';
+import { RequestDetailComponent } from './features/request-detail/request-detail.component';
+import { UserCreateComponent } from './features/user-create/user-create.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +26,13 @@ import { VendorDetailComponent } from './features/vendor-detail/vendor-detail.co
     UserDetailComponent,
     VendorListComponent,
     VendorDetailComponent,
+    ProductListComponent,
+    ProductDetailComponent,
+    MenuComponent,
+    ProductDetailComponent,
+    RequestListComponent,
+    RequestDetailComponent,
+    UserCreateComponent,
   ],
   imports: [
     BrowserModule,

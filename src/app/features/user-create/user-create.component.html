@@ -1,0 +1,101 @@
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="username">Username: </label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="user.username"
+    type="text"
+    name="Username"
+    id="username"
+    placeholder="Username"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="password">Password: </label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="user.password"
+    type="password"
+    name="Password"
+    id="Password"
+    placeholder="Password"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="First Name">First Name: </label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="user.firstName"
+    type="text"
+    name="First Name"
+    id="First Name"
+    placeholder="First Name"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="Last Name">Last Name: </label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="user.lastName"
+    type="text"
+    name="Last Name"
+    id="Last Name"
+    placeholder="Last Name"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="Phone Number"
+    >Phone Number:
+  </label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="user.phone"
+    type="text"
+    name="Phone Number"
+    id="Phone Number"
+    placeholder="Phone Number"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="Email">Email: </label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="user.email"
+    type="text"
+    name="Email"
+    id="Email"
+    placeholder="Email"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="Reviwer">Reviewer: </label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="user.reviewer"
+    type="checkbox"
+    name="Reviewer"
+    id="Reviewer"
+    placeholder="Reviewer"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="Admin">Admin: </label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="user.admin"
+    type="checkbox"
+    name="Admin"
+    id="Admin"
+    placeholder="Admin"
+  />
+</div>
+
+<button type="button" class="btn btn-primary" (click)="createUser()">
+  Create
+</button>
