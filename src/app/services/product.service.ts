@@ -36,4 +36,9 @@ export class ProductService {
   createProduct(product: Product): Observable<Product[]> {
     return this.http.post<Product[]>(this.url, product);
   }
+
+  deleteById(id: number): Observable<Product[]> {
+    let requestUrl = this.url + '/' + id;
+    return this.http.delete<Product[]>(requestUrl);
+  }
 }

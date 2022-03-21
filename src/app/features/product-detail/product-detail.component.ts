@@ -36,12 +36,12 @@ export class ProductDetailComponent implements OnInit {
     });
   }
 
-  /*deleteProduct() {
+  deleteProduct() {
     this.productService.deleteById(this.product.id).subscribe(
       (data) => {
-        this.router.navigateByUrl('/vendor/list');
+        this.router.navigateByUrl('/product/list');
       },
       (error) => console.log(error)
     );
-  }*/
+  }
 }

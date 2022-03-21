@@ -3,10 +3,17 @@
 </button>
 <div class="form-group row">
   <label class="col-form-label col-sm-2" for="vendor">Vendor: </label>
+  <select>
+    <option *ngFor="let vendor of vendors">
+      {{ product.vendor.name }}
+      *ngFor="let vendor of vendors.name">
+      {{ vendor.name }}
+    </option>
+  </select>
   <input
     class="form-control col-sm-6"
     [(ngModel)]="product.vendor.name"
-    type="text"
+    type="vendor"
     name="Vendor"
     id="vendor"
     placeholder="Vendor"
