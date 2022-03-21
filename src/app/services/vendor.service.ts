@@ -26,9 +26,19 @@ export class VendorService {
     return this.http.get<Vendor[]>(`${this.url}/`);
   }
 
-  //http://localhost:8080/users/{id}
+  //http://localhost:8080/vendor/{id}
   getbyId(id: number): Observable<Vendor[]> {
     let requestUrl = this.url + '/' + id;
     return this.http.get<Vendor[]>(requestUrl);
+  }
+
+  //http://localhost:8080/vendors
+  createVendor(vendor: Vendor): Observable<Vendor[]> {
+    return this.http.post<Vendor[]>(this.url, vendor);
+  }
+
+  deleteById(id: number): Observable<Vendor[]> {
+    let requestUrl = this.url + '/' + id;
+    return this.http.delete<Vendor[]>(requestUrl);
   }
 }

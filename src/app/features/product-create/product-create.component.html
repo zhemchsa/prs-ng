@@ -1,3 +1,6 @@
+<button type="button" class="btn btn-primary" routerLink="/product/create">
+  Add New Product
+</button>
 <div class="form-group row">
   <label class="col-form-label col-sm-2" for="vendor">Vendor: </label>
   <input
@@ -7,7 +10,6 @@
     name="Vendor"
     id="vendor"
     placeholder="Vendor"
-    disabled
   />
 </div>
 
@@ -20,7 +22,6 @@
     name="Part Number"
     id="partNumber"
     placeholder="Part Number"
-    disabled
   />
 </div>
 
@@ -33,7 +34,6 @@
     name="Name"
     id="name"
     placeholder="Name"
-    disabled
   />
 </div>
 
@@ -46,7 +46,6 @@
     name="Price"
     id="price"
     placeholder="Price"
-    disabled
   />
 </div>
 
@@ -59,7 +58,6 @@
     name="Unit"
     id="unit"
     placeholder="Unit"
-    disabled
   />
 </div>
 
@@ -72,18 +70,9 @@
     name="Photo Path"
     id="photoPath"
     placeholder="Photo Path"
-    disabled
   />
 </div>
 
-<div class="d-grid gap-2 d-md-block">
-  <button class="btn btn-primary" type="edit">Edit</button>
-  <button
-    type="button"
-    (click)="deleteProduct()"
-    class="btn btn-primary"
-    type="delete"
-  >
-    Delete
-  </button>
-</div>
+<button type="button" class="btn btn-primary" (click)="createProduct()">
+  Create
+</button>
