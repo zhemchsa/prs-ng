@@ -7,7 +7,6 @@
     name="Code"
     id="Code"
     placeholder="Code"
-    disabled
   />
 </div>
 
@@ -20,7 +19,6 @@
     name="Name"
     id="Name"
     placeholder="Name"
-    disabled
   />
 </div>
 
@@ -33,7 +31,6 @@
     name="Address"
     id="Adress"
     placeholder="Adress"
-    disabled
   />
 </div>
 
@@ -46,7 +43,6 @@
     name="City"
     id="City"
     placeholder="City"
-    disabled
   />
 </div>
 
@@ -59,7 +55,6 @@
     name="State"
     id="State"
     placeholder="State"
-    disabled
   />
 </div>
 
@@ -72,7 +67,6 @@
     name="Zip"
     id="Zip"
     placeholder="Zip"
-    disabled
   />
 </div>
 
@@ -85,7 +79,6 @@
     name="Phone"
     id="Phone"
     placeholder="Phone"
-    disabled
   />
 </div>
 
@@ -98,18 +91,9 @@
     name="Email"
     id="Email"
     placeholder="Email"
-    disabled
   />
 </div>
 
-<div class="d-grid gap-2 d-md-block">
-  <button class="btn btn-primary" type="edit">Edit</button>
-  <button
-    type="button"
-    (click)="deleteVendor()"
-    class="btn btn-primary"
-    type="delete"
-  >
-    Delete
-  </button>
-</div>
+<button type="button" class="btn btn-primary" (click)="createVendor()">
+  Create
+</button>

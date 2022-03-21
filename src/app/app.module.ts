@@ -17,6 +17,8 @@ import { MenuComponent } from './core/menu/menu.component';
 import { RequestListComponent } from './features/request-list/request-list.component';
 import { RequestDetailComponent } from './features/request-detail/request-detail.component';
 import { UserCreateComponent } from './features/user-create/user-create.component';
+import { VendorCreateComponent } from './features/vendor-create/vendor-create.component';
+import { ProductCreateComponent } from './features/product-create/product-create.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { UserCreateComponent } from './features/user-create/user-create.componen
     RequestListComponent,
     RequestDetailComponent,
     UserCreateComponent,
+    VendorCreateComponent,
+    ProductCreateComponent,
   ],
   imports: [
     BrowserModule,

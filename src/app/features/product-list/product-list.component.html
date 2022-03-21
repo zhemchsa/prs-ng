@@ -1,3 +1,6 @@
+<button type="button" class="btn btn-primary" routerLink="/product/create">
+  Add New Product
+</button>
 <table class="table table-striped">
   <thead>
     <th scope="col">Vendor</th>
@@ -15,7 +18,12 @@
       <td>{{ product.price }}</td>
       <td>{{ product.unit }}</td>
       <td>{{ product.photoPath }}</td>
-      <td><a routerLink="/product/detail/{{ product.id }}">Details</a></td>
+      <td>
+        <a routerLink="/product/detail/{{ product.id }}">Details</a>|
+        <a routerLink="/product/list" (click)="deleteProduct(product.id)"
+          >Delete</a
+        >
+      </td>
     </tr>
   </tbody>
 </table>
