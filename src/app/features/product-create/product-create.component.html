@@ -3,21 +3,16 @@
 </button>
 <div class="form-group row">
   <label class="col-form-label col-sm-2" for="vendor">Vendor: </label>
-  <select>
-    <option *ngFor="let vendor of vendors">
-      {{ product.vendor.name }}
-      *ngFor="let vendor of vendors.name">
+  <select
+    [(ngModel)]="product.vendor"
+    class="form-control col-sm-6"
+    id="vendor"
+    name="Vendor"
+  >
+    <option *ngFor="let vendor of vendors" [ngValue]="vendor">
       {{ vendor.name }}
     </option>
   </select>
-  <input
-    class="form-control col-sm-6"
-    [(ngModel)]="product.vendor.name"
-    type="vendor"
-    name="Vendor"
-    id="vendor"
-    placeholder="Vendor"
-  />
 </div>
 
 <div class="form-group row">
@@ -49,7 +44,7 @@
   <input
     class="form-control col-sm-6"
     [(ngModel)]="product.price"
-    type="number"
+    type="text"
     name="Price"
     id="price"
     placeholder="Price"
