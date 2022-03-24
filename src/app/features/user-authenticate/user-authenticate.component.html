@@ -1,22 +1,24 @@
-<button type="button" class="btn btn-primary" routerLink="/product/create">
-  Add New Product
-</button>
 <div class="form-group row">
-  <label class="col-form-label col-sm-2" for="vendor">Vendor: </label>
-  <select>
-    <option *ngFor="let vendor of vendors">
-      {{ product.vendor.name }}
-      *ngFor="let vendor of vendors.name">
-      {{ vendor.name }}
-    </option>
-  </select>
+  <label class="col-form-label col-sm-2" for="username">Username: </label>
   <input
     class="form-control col-sm-6"
-    [(ngModel)]="product.vendor.name"
-    type="vendor"
-    name="Vendor"
-    id="vendor"
-    placeholder="Vendor"
+    [(ngModel)]="user.username"
+    type="text"
+    name="Username"
+    id="username"
+    placeholder="Username"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="password">Password: </label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="user.password"
+    type="password"
+    name="Password"
+    id="Password"
+    placeholder="Password"
   />
 </div>
 

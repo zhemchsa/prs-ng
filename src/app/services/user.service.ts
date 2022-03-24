@@ -43,8 +43,8 @@ export class UserService {
   }
 
   //http://localhost:8080/users/authenticate
-  authenticate(user: User) {
+  authenticate(user: User): Observable<User[]> {
     let requestUrl = this.url + '/authenticate';
-    return this.http.post<User[]>(requestUrl);
+    return this.http.post<User[]>(requestUrl, user);
   }
 }
