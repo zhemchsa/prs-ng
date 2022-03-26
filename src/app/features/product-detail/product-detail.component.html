@@ -41,7 +41,9 @@
   <label class="col-form-label col-sm-2" for="price">Price: </label>
   <input
     class="form-control col-sm-6"
-    [(ngModel)]="product.price"
+    [ngModel]="product.price | currency"
+    (ngModelChange)="product.price = $event"
+    type="number"
     type="number"
     name="Price"
     id="price"

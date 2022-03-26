@@ -20,6 +20,7 @@ import { UserCreateComponent } from './features/user-create/user-create.componen
 import { VendorCreateComponent } from './features/vendor-create/vendor-create.component';
 import { ProductCreateComponent } from './features/product-create/product-create.component';
 import { UserAuthenticateComponent } from './features/user-authenticate/user-authenticate.component';
+import { UserEditComponent } from './features/user-edit/user-edit.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { UserAuthenticateComponent } from './features/user-authenticate/user-aut
     VendorCreateComponent,
     ProductCreateComponent,
     UserAuthenticateComponent,
+    UserEditComponent,
   ],
   imports: [
     BrowserModule,
