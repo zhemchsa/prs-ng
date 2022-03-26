@@ -19,6 +19,7 @@ import { RequestDetailComponent } from './features/request-detail/request-detail
 import { UserCreateComponent } from './features/user-create/user-create.component';
 import { VendorCreateComponent } from './features/vendor-create/vendor-create.component';
 import { ProductCreateComponent } from './features/product-create/product-create.component';
+import { UserAuthenticateComponent } from './features/user-authenticate/user-authenticate.component';
 import { UserEditComponent } from './features/user-edit/user-edit.component';
 import { VendorEditComponent } from './features/vendor-edit/vendor-edit.component';
 
@@ -39,6 +40,7 @@ import { VendorEditComponent } from './features/vendor-edit/vendor-edit.componen
     UserCreateComponent,
     VendorCreateComponent,
     ProductCreateComponent,
+    UserAuthenticateComponent,
     UserEditComponent,
     VendorEditComponent,
   ],
