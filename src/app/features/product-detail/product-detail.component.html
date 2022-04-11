@@ -1,3 +1,4 @@
+<app-menu></app-menu>
 <div class="form-group row">
   <label class="col-form-label col-sm-2" for="vendor">Vendor: </label>
   <input
@@ -43,8 +44,7 @@
     class="form-control col-sm-6"
     [ngModel]="product.price | currency"
     (ngModelChange)="product.price = $event"
-    type="number"
-    type="number"
+    type="text"
     name="Price"
     id="price"
     placeholder="Price"
@@ -79,7 +79,9 @@
 </div>
 
 <div class="d-grid gap-2 d-md-block">
-  <button class="btn btn-primary" type="edit">Edit</button>
+  <button class="btn btn-primary" routerLink="/product/edit/{{ product.id }}">
+    Edit
+  </button>
   <button
     type="button"
     (click)="deleteProduct()"

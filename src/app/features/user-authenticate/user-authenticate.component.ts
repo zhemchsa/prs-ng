@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/models/user.model';
 import { SystemService } from 'src/app/services/system.service';
 import { UserService } from 'src/app/services/user.service';
@@ -13,7 +14,8 @@ export class UserAuthenticateComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private systemServide: SystemService
+    private systemServide: SystemService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {}
@@ -23,8 +25,9 @@ export class UserAuthenticateComponent implements OnInit {
       (data) => {
         if (data.length > 0) {
           this.systemServide.loggedInUser = data[0];
+          this.router.navigateByUrl('/user/list');
         } else {
-          //username password combo bad
+          console.log('no user found');
         }
       },
       (error) => console.log(error)

@@ -1,1 +1,100 @@
-<p>vendor-edit works!</p>
+<app-menu></app-menu>
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="code">Code: </label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="vendor.code"
+    type="text"
+    name="Code"
+    id="code"
+    placeholder="Code"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="name">Name: </label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="vendor.name"
+    type="text"
+    name="Name"
+    id="Name"
+    placeholder="Name"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="adress">Adress: </label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="vendor.address"
+    type="text"
+    name="Address"
+    id="Adress"
+    placeholder="Adress"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="city">City: </label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="vendor.city"
+    type="text"
+    name="City"
+    id="City"
+    placeholder="City"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="state">State: </label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="vendor.state"
+    type="text"
+    name="State"
+    id="State"
+    placeholder="State"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="zip">Zip: </label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="vendor.zip"
+    type="text"
+    name="Zip"
+    id="Zip"
+    placeholder="Zip"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="phone">Phone: </label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="vendor.phone"
+    type="text"
+    name="Phone"
+    id="Phone"
+    placeholder="Phone"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="email">Email: </label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="vendor.email"
+    type="text"
+    name="Email"
+    id="Email"
+    placeholder="Email"
+  />
+</div>
+
+<button type="button" (click)="editVendor()" class="btn btn-primary">
+  Save
+</button>

@@ -22,6 +22,14 @@ import { ProductCreateComponent } from './features/product-create/product-create
 import { UserAuthenticateComponent } from './features/user-authenticate/user-authenticate.component';
 import { UserEditComponent } from './features/user-edit/user-edit.component';
 import { VendorEditComponent } from './features/vendor-edit/vendor-edit.component';
+import { RequestCreateComponent } from './features/request-create/request-create.component';
+import { ProductEditComponent } from './features/product-edit/product-edit.component';
+import { RequestEditComponent } from './features/request-edit/request-edit.component';
+import { RequestLinesComponent } from './features/request-lines/request-lines.component';
+import { LineItemCreateComponent } from './features/line-item-create/line-item-create.component';
+import { LineItemEditComponent } from './features/line-item-edit/line-item-edit.component';
+import { RequestReviewComponent } from './features/request-review/request-review.component';
+import { RequestApproveComponent } from './features/request-approve/request-approve.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +51,14 @@ import { VendorEditComponent } from './features/vendor-edit/vendor-edit.componen
     UserAuthenticateComponent,
     UserEditComponent,
     VendorEditComponent,
+    RequestCreateComponent,
+    ProductEditComponent,
+    RequestEditComponent,
+    RequestLinesComponent,
+    LineItemCreateComponent,
+    LineItemEditComponent,
+    RequestReviewComponent,
+    RequestApproveComponent,
   ],
   imports: [
     BrowserModule,

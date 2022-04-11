@@ -23,7 +23,6 @@ export class Vendor {
     this.id = id;
     this.code = code;
     this.name = name;
-    this.name = name;
     this.address = address;
     this.city = city;
     this.state = state;

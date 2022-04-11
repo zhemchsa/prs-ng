@@ -1,0 +1,73 @@
+<app-menu></app-menu>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">User</th>
+      <th scope="col">Description</th>
+      <th scope="col">Justfication</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ request.user.lastName }}, {{ request.user.firstName }}</td>
+      <td>{{ request.description }}</td>
+      <td>{{ request.justification }}</td>
+      <td>{{ request.total | currency }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Product</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let lineItem of lineItems">
+      <td>{{ lineItem.product.name }}</td>
+      <td>{{ lineItem.quantity }}</td>
+      <td>{{ lineItem.product.price * lineItem.quantity | currency }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button type="button" class="btn btn-primary" (click)="approveRequest()">
+  Approve Request
+</button>
+
+<button
+  *ngIf="request.reasonForRejection.length == 0"
+  type="button"
+  class="btn btn-primary"
+  disabled
+>
+  Reject Request
+</button>
+
+<button
+  *ngIf="request.reasonForRejection.length > 0"
+  type="button"
+  class="btn btn-primary"
+  (click)="rejectRequest()"
+>
+  Reject Request
+</button>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="reasonForRejection"
+    >Reason For Rejection:</label
+  >
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="request.reasonForRejection"
+    type="text"
+    name="ReasonForRejection"
+    id="reasonForRejection"
+    placeholder="Reason For Rejection"
+  />
+</div>

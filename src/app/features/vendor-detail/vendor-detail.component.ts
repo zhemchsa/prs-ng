@@ -11,7 +11,7 @@ import { VendorService } from 'src/app/services/vendor.service';
 export class VendorDetailComponent implements OnInit {
   //create a new variable Vendor to store it and reference later
   vendor: Vendor = new Vendor();
-  vendorId: number = 0;
+  vendorId: number = 1;
 
   constructor(
     private vendorService: VendorService,

@@ -8,11 +8,17 @@ import { SystemService } from 'src/app/services/system.service';
   styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent implements OnInit {
-  user: User | null = null;
+  user?: User = undefined;
 
   constructor(private systemService: SystemService) {}
 
   ngOnInit(): void {
     this.user = this.systemService.loggedInUser;
+    /*this.systemService.user$.subscribe(
+      (user) => {
+        this.user = user;
+      },
+      (error) => error.log(error)
+    );*/
   }
 }

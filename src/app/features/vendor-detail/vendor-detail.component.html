@@ -1,3 +1,4 @@
+<app-menu></app-menu>
 <div class="form-group row">
   <label class="col-form-label col-sm-2" for="code">Code: </label>
   <input
@@ -103,7 +104,9 @@
 </div>
 
 <div class="d-grid gap-2 d-md-block">
-  <button class="btn btn-primary" type="edit">Edit</button>
+  <button class="btn btn-primary" routerLink="/vendor/edit/{{ vendor.id }}">
+    Edit
+  </button>
   <button
     type="button"
     (click)="deleteVendor()"

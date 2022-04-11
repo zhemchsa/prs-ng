@@ -11,8 +11,8 @@ export class User {
 
   constructor(
     id: number = 0,
-    username: string = '',
-    password: string = '',
+    username: string = 'zhemchsa',
+    password: string = 'zhemchsa',
     firstName: string = '',
     lastName: string = '',
     phone: string = '',
