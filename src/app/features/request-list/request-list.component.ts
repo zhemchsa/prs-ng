@@ -23,8 +23,10 @@ export class RequestListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const loggedInUser = this.systemService.loggedInUser;
-    if (loggedInUser && loggedInUser.admin) {
+    if (this.systemService.loggedInUser != undefined) {
+      this.loggedInUser = this.systemService.loggedInUser;
+    }
+    if (this.loggedInUser && this.loggedInUser.admin) {
       this.requestService.getAll().subscribe(
         (data) => {
           this.requests = data;
@@ -32,8 +34,8 @@ export class RequestListComponent implements OnInit {
         },
         (error) => console.log(error)
       );
-    } else if (loggedInUser && !loggedInUser.admin) {
-      this.requestService.getAllByUSer(loggedInUser).subscribe(
+    } else if (this.loggedInUser && !this.loggedInUser.admin) {
+      this.requestService.getAllByUSer(this.loggedInUser).subscribe(
         (data) => {
           this.requests = data;
           console.log(data);

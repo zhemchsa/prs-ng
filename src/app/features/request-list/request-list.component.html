@@ -24,7 +24,7 @@
       <td>{{ request.status }}</td>
       <td>
         <a routerLink="/request/detail/{{ request.id }}">Details</a> |
-        <a routerLink="/request/lines/{{ request.id }}">Lines</a>
+        <a routerLink="/request/lines/{{ request.id }}">Lines</a> |
         <a
           *ngIf="loggedInUser.admin === true"
           routerLink="/request/list"
